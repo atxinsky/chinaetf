@@ -100,6 +100,7 @@ class BacktestContext:
         self.trail_stop = 0.06
         self.max_hold = 120
         self.cooldown = 3
+        self.adx_threshold = 20
 
         # 内部状态
         self.cooldown_dict = {}
