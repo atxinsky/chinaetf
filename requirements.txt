@@ -1,0 +1,18 @@
+# ETF量化系统依赖
+
+# 核心
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 数据获取
+akshare>=1.12.0
+
+# Web界面
+streamlit>=1.30.0
+plotly>=5.18.0
+
+# 数据库（Python内置，无需安装）
+# sqlite3
+
+# 其他工具
+python-dateutil>=2.8.0

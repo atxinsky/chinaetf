@@ -1,0 +1,25 @@
+# ETF量化回测系统 Docker Compose配置
+
+version: '3.8'
+
+services:
+  etf-quant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: etf-quant
+    ports:
+      - "8505:8505"
+    volumes:
+      # 数据持久化
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
+    networks:
+      - etf-network
+
+networks:
+  etf-network:
+    driver: bridge
